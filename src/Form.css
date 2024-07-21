@@ -1,0 +1,174 @@
+/* Apply flexbox centering to the parent container */
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("main.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.nest {
+  display: flex;
+  flex-direction: row;
+}
+  /* Typing container styles */
+  .typing-container {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: rgb(12, 22, 45);
+    width: 500px;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 20px; /* Optional: adds padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better visibility */
+    border-radius: 8px; /* Optional: rounds the corners */
+  }
+/* General styling for the input */
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+  background-color: rgb(12, 22, 45);
+  color: white;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light bottom border */
+  border-radius: 0; /* Remove any border-radius */
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Styling when the input is focused */
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="url"]:focus {
+  border-bottom: 2px solid skyblue; /* Sky-blue bottom border on focus */
+  box-shadow: 0 0 8px skyblue; /* Optional glow effect */
+}
+
+/* Additional styling for placeholder text */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1; /* Overriding the default opacity */
+}
+/* Label styling */
+
+
+/* General styling for the input */
+input[type="email"] {
+  background-color: rgb(12, 22, 45);
+  color: white;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light bottom border */
+  border-radius: 0; /* Remove any border-radius */
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+/* Styling when the input is focused */
+input[type="email"]:focus {
+  border-bottom: 2px solid skyblue; /* Sky-blue bottom border on focus */
+  box-shadow: 0 0 8px skyblue; /* Optional glow effect */
+}
+
+/* Additional styling for placeholder text */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1; /* Overriding the default opacity */
+}
+
+/* Hover effect on the label */
+.input-label:hover {
+  color: skyblue; /* Change label color on hover */
+}
+
+
+  /* Optional: Add styles for the input and button if needed */
+  .typing-container .nest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .typing-container input,
+  .typing-container button {
+    margin: 5px;
+  }
+  .input-label {
+    font-size: 15px;
+    color: #c5c4c0;
+    margin-right: 10px;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+  }
+  /* Button styling */
+.styled-button {
+  background-color: rgb(12, 22, 45);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 15px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  font-size: 13px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Remove default outline */
+  text-align: center;
+}
+
+/* Button hover and focus effect */
+.styled-button:hover, .styled-button:focus {
+  background-color: rgb(12, 22, 45); /* Keep the background color */
+  border-color: skyblue; /* Change border color on hover/focus */
+  box-shadow: 0 0 8px skyblue; /* Optional glow effect */
+}
+
+/* Button active state */
+.styled-button:active {
+  background-color: rgb(12, 22, 45); /* Keep the background color */
+  border-color: skyblue; /* Border color remains sky blue */
+  box-shadow: 0 0 5px skyblue inset; /* Inset shadow for active effect */
+}
+
+/* Additional styling for disabled state */
+.styled-button:disabled {
+  background-color: rgba(12, 22, 45, 0.5); /* Lighter background for disabled */
+  color: rgba(255, 255, 255, 0.5); /* Lighter text color for disabled */
+  border-color: rgba(255, 255, 255, 0.3); /* Same border color for disabled */
+  cursor: not-allowed; /* Show a not-allowed cursor for disabled */
+}
+.error-message{
+  font-size: 10px;
+  color:red;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .typing-container {
+    padding: 10px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .input-label {
+    font-size: 14px;
+  }
+
+  .styled-button {
+    font-size: 14px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,149 @@
+body {
+  background-color: #1a1a1d;
+  color: #c5c6c7;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.gaming-form-data {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #0b0c10;
+  border: 2px solid #66fcf1;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.gaming-form-data h2 {
+  text-align: center;
+  color: #66fcf1;
+  animation: pulse 1.5s infinite;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #1f2833;
+  border-radius: 10px;
+  border: 1px solid #66fcf1;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table-row:hover {
+  transform: scale(1.02);
+  background-color: #45a29e;
+}
+
+.label {
+  color: #66fcf1;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+  background-color: rgb(12, 22, 45);
+  color: white;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  padding: 10px;
+  margin: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="url"]:focus {
+  border-bottom: 2px solid skyblue;
+  box-shadow: 0 0 8px skyblue;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+button {
+  background-color: rgb(12, 22, 45);
+  color: white;
+  margin: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gaming-form-data {
+    padding: 10px;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gaming-form-data {
+    margin: 20px auto;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"] {
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
